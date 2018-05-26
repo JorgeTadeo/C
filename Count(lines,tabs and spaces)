@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/* Program that counts the number of spaces, tabs and new lines in a file. */
+main()
+{
+    int c, blank, nl, tab;
+
+    nl = 0;
+    while ((c = getchar()) != EOF)
+        if (c == ' ' ){
+        ++blank;
+        }
+        if (c == "\b"){
+            ++tab;
+        }
+        if( c == "\n"){
+            ++nl;
+        }
+        printf( "%d %d %d\n", blank, tab, nl);
+
+}
